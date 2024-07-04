@@ -30,6 +30,9 @@ const rentalRoutes = require('./routes/rental');
 app.use('/api/properties', propertyRoutes);
 app.use('/api', transactionRoutes);
 app.use('/api', authRoutes);
+app.get('/' , (req,res) => {
+  res.json("hello");
+})
 
 
 app.listen(PORT, () => {
