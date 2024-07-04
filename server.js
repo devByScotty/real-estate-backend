@@ -9,7 +9,12 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin:['https://vercel-mern-1whq.vercel.app'],
+  methods:["POST",GET],
+  credentials:trur
+  
+}));
 
 // Connect to Database
 
